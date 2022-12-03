@@ -8,7 +8,7 @@ namespace WizardForms.Professor
 {
     internal class Professor
     {
-
+        private int id;
         private string Nome;
         private string Sobrenome;
         private string Email;
@@ -18,11 +18,13 @@ namespace WizardForms.Professor
         private string Linguagem;
         private string Estado;
         private string Cidade;
-        private string Experiencia;
+        private string EscolaProx;
+
 
         public Professor()
         {
-
+            
+            this.id = 0;
             this.Nome = "";
             this.Sobrenome = "";
             this.Email = "";
@@ -32,10 +34,13 @@ namespace WizardForms.Professor
             this.Linguagem = "";
             this.Estado = "";
             this.Cidade = "";
-            this.Experiencia = "";
+            this.EscolaProx = "";
+
         }
-        public Professor(string p_Experiencia, string p_Cidade, string p_Estado, string p_Linguagem, string p_Nome, string p_Sobrenome, string p_Email, string p_Senha, string p_RepSenha, string p_Celular, )
+        public Professor(int p_id, string p_Cidade, string p_Estado, string p_Linguagem, string p_Nome, string p_Sobrenome, string p_Email, string p_Senha,
+            string p_RepSenha, string p_Celular,string p_EscolaProx)
         {
+            this.id = p_id;
             this.Nome = p_Nome;
             this.Sobrenome = p_Sobrenome;
             this.Email = p_Email;
@@ -45,9 +50,14 @@ namespace WizardForms.Professor
             this.Linguagem = p_Linguagem;
             this.Estado = p_Estado;
             this.Cidade = p_Cidade;
-            this.Experiencia = p_Experiencia;
+            this.EscolaProx = p_EscolaProx;
+
+
 
         }
+        //id- Metodos 
+        public int getId() { return id; }
+        public void setId(int id) { this.id = id; }
         //Nome- Metodos 
         public string getNome()
         { return Nome; }
@@ -57,7 +67,7 @@ namespace WizardForms.Professor
         //Sobrenome- Metodos 
         public string getSobreNome()
         { return Sobrenome; }
-        public void seSobreNome(string p_Sobrenome)
+        public void setSobreNome(string p_Sobrenome)
         { this.Sobrenome = p_Sobrenome; }
 
         //Email- Metodos 
@@ -102,11 +112,11 @@ namespace WizardForms.Professor
         public void setCidade(string p_Cidade)
         { this.Cidade = p_Cidade; }
 
-        //Experiencia- Metodos 
-        public string getExperiencia()
-        { return Experiencia; }
-        public void setExperiencia(string p_Experiencia)
-        { this.Experiencia = p_Experiencia; }
+        //Escola Proxima- Metodos 
+        public string getEscolaprox()
+        { return EscolaProx; }
+        public void setEscolaprox(string p_EscolaProx)
+        { this.EscolaProx = p_EscolaProx; }
 
     }
 }

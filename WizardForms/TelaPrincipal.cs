@@ -14,18 +14,6 @@ namespace WizardForms
 {
     public partial class TelaPrincipal : Form
     {
-        // Instanciando as telas de Aluno
-        // ApagarAluno alunoApagar = new ApagarAluno();
-        // AtualizarAluno alunoAtualizar = new AtualizarAluno();
-        CadastroAluno alunoCadastro = new CadastroAluno();
-        // ConsultarAluno alunoConsultar = new ConsultarAluno();
-        
-        // Instanciando as telas de Professor
-       // ApagarProfessor professorApagar = new ApagarProfessor();
-       // AtualizarProfessor professorAtualizar = new AtualizarProfessor();
-       // CadastroProfessor professorCadastro = new CadastroProfessor();
-       // ConsultarProfessor professorConsultar = new ConsultarProfessor();
-
 
 
         public TelaPrincipal()
@@ -38,94 +26,12 @@ namespace WizardForms
 
         }
 
-        private void menuStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void tristeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void menuStrip2_ItemClicked_1(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void cadastroToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-         
-            this.Hide();
   
-        }
+
 
         private void calvoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
              
-        }
-
-        private void atualizarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-             // alunoAtualizar.Show();
-        }
-
-        private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            // alunoConsultar.Show();
-        }
-
-        private void apagarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-           // alunoApagar.Show();
-        }
-
-        private void cadastroToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            CadastroProfessor cadastroprofessor = new CadastroProfessor();
-            this.Hide();
-            cadastroprofessor.Show();
-        }
-
-        private void consultarToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-           // professorConsultar.Show();
-        }
-
-        private void atualizarToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-           // professorAtualizar.Show();
-        }
-
-        private void apagarToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-           // professorApagar.Show();
         }
 
         private void sairToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -138,6 +44,72 @@ namespace WizardForms
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void menuStrip2_ItemClicked_2(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void cadastroToolStripMenuItem1_Click_1(object sender, EventArgs e)
+        {
+            CadastroProfessor professorCadastro = new CadastroProfessor();
+            professorCadastro.MdiParent = this;
+            professorCadastro.Show();
+        }
+
+        private void consultarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ConsultarProfessor professorConsultar = new ConsultarProfessor();
+            professorConsultar.MdiParent = this;
+            professorConsultar.Show();
+        }
+
+        private void atualizarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            AtualizarProfessor professorAtualizar = new AtualizarProfessor();
+            professorAtualizar.MdiParent = this;
+            professorAtualizar.Show();
+        }
+
+        private void apagarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ExcluirProfessor professorApagar = new ExcluirProfessor();
+            professorApagar.MdiParent = this;
+            professorApagar.Show();
+        }
+
+        private void cadastroToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            CadastroAluno cadastroAluno = new CadastroAluno();
+            cadastroAluno.MdiParent = this;
+            cadastroAluno.Show();
+        }
+
+        private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConsultarAluno consultarAluno = new ConsultarAluno();
+            consultarAluno.MdiParent = this;
+            consultarAluno.Show();
+        }
+
+        private void atualizarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AtualizarAluno atualizarAluno = new AtualizarAluno();
+            atualizarAluno.MdiParent= this;
+            atualizarAluno.Show();
+        }
+
+        private void apagarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExcluirAluno excluirAluno= new ExcluirAluno();
+            excluirAluno.MdiParent = this;
+            excluirAluno.Show();
+        }
+
+        private void sairToolStripMenuItem1_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

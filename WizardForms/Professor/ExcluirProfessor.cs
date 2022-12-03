@@ -16,5 +16,30 @@ namespace WizardForms.Professor
         {
             InitializeComponent();
         }
+
+        private void ExcluirProfessor_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Professor professor= new Professor();
+            professor.setId(int.Parse(textBox1.Text));
+
+
+            ProfessorDAO professorDAO = new ProfessorDAO();
+
+            if (professorDAO.excluir(professor))
+            {
+                MessageBox.Show("Apagado sucesso!", "Apagado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            else
+            {
+                MessageBox.Show("Nao excluido!", "Apagado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+        }
     }
 }

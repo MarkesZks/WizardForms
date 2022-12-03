@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace WizardForms.Professor
 {
-    public partial class ConsultarProfessores : Form
+    public partial class ConsultarProfessor : Form
     {
-        public ConsultarProfessores()
+        public ConsultarProfessor()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ProfessorDAO professorDAO = new ProfessorDAO();
+            dataGridView1.DataSource = professorDAO.consultar();
         }
     }
 }

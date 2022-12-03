@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data">
+      <HintPath>C:\Users\EGLOBAL\Downloads\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,11 +49,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Aluno\AtualizaAluno.cs">
+    <Compile Include="Aluno\AlunoDAO.cs" />
+    <Compile Include="Aluno\Aluno.cs" />
+    <Compile Include="Aluno\AtualizarAluno.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Aluno\AtualizaAluno.Designer.cs">
-      <DependentUpon>AtualizaAluno.cs</DependentUpon>
+    <Compile Include="Aluno\AtualizarAluno.Designer.cs">
+      <DependentUpon>AtualizarAluno.cs</DependentUpon>
     </Compile>
     <Compile Include="Aluno\CadastroAluno.cs">
       <SubType>Form</SubType>
@@ -58,11 +63,11 @@
     <Compile Include="Aluno\CadastroAluno.Designer.cs">
       <DependentUpon>CadastroAluno.cs</DependentUpon>
     </Compile>
-    <Compile Include="Aluno\ConsultaAluno.cs">
+    <Compile Include="Aluno\ConsultarAluno.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Aluno\ConsultaAluno.Designer.cs">
-      <DependentUpon>ConsultaAluno.cs</DependentUpon>
+    <Compile Include="Aluno\ConsultarAluno.Designer.cs">
+      <DependentUpon>ConsultarAluno.cs</DependentUpon>
     </Compile>
     <Compile Include="Aluno\ExcluirAluno.cs">
       <SubType>Form</SubType>
@@ -70,6 +75,7 @@
     <Compile Include="Aluno\ExcluirAluno.Designer.cs">
       <DependentUpon>ExcluirAluno.cs</DependentUpon>
     </Compile>
+    <Compile Include="Conexao.cs" />
     <Compile Include="Professor\AtualizarProfessor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,11 +88,11 @@
     <Compile Include="Professor\CadastroProfessor.Designer.cs">
       <DependentUpon>CadastroProfessor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Professor\ConsultarProfessores.cs">
+    <Compile Include="Professor\ConsultarProfessor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Professor\ConsultarProfessores.Designer.cs">
-      <DependentUpon>ConsultarProfessores.cs</DependentUpon>
+    <Compile Include="Professor\ConsultarProfessor.Designer.cs">
+      <DependentUpon>ConsultarProfessor.cs</DependentUpon>
     </Compile>
     <Compile Include="Professor\ExcluirProfessor.cs">
       <SubType>Form</SubType>
@@ -95,6 +101,7 @@
       <DependentUpon>ExcluirProfessor.cs</DependentUpon>
     </Compile>
     <Compile Include="Professor\Professor.cs" />
+    <Compile Include="Professor\ProfessorDAO.cs" />
     <Compile Include="TelaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,8 +110,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Aluno\AtualizarAluno.resx">
+      <DependentUpon>AtualizarAluno.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Aluno\CadastroAluno.resx">
       <DependentUpon>CadastroAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aluno\ConsultarAluno.resx">
+      <DependentUpon>ConsultarAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aluno\ExcluirAluno.resx">
+      <DependentUpon>ExcluirAluno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Professor\AtualizarProfessor.resx">
       <DependentUpon>AtualizarProfessor.cs</DependentUpon>
@@ -112,8 +128,8 @@
     <EmbeddedResource Include="Professor\CadastroProfessor.resx">
       <DependentUpon>CadastroProfessor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Professor\ConsultarProfessores.resx">
-      <DependentUpon>ConsultarProfessores.cs</DependentUpon>
+    <EmbeddedResource Include="Professor\ConsultarProfessor.resx">
+      <DependentUpon>ConsultarProfessor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Professor\ExcluirProfessor.resx">
       <DependentUpon>ExcluirProfessor.cs</DependentUpon>
@@ -126,6 +142,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="TelaPrincipal.resx">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>
@@ -143,6 +160,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\wizard-logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

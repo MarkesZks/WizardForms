@@ -16,5 +16,25 @@ namespace WizardForms.Aluno
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Aluno aluno = new Aluno();
+            aluno.setId(int.Parse(textBox1.Text));
+
+
+            AlunoDAO alunoDAO = new AlunoDAO();
+
+            if (alunoDAO.excluir(aluno))
+            {
+                MessageBox.Show("Apagado sucesso!", "Apagado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            else
+            {
+                MessageBox.Show("Nao excluido!", "Apagado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+        }
     }
 }
